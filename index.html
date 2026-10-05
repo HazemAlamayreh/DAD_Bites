@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DAD Knowledge Bites 2026</title>
+<style>
+:root{
+  --navy:#07375d;
+  --navy2:#0a426f;
+  --teal:#06ad98;
+  --teal2:#15bfa9;
+  --sky:#eaf4f8;
+  --paper:#f8fbfd;
+  --ink:#122332;
+  --muted:#607487;
+  --line:#d7e1e7;
+  --white:#ffffff;
+  --shadow:0 12px 30px rgba(7,55,93,.10);
+  --shadow2:0 20px 45px rgba(7,55,93,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.55}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+
+/* NAV */
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(7,55,93,.08)}
+.nav{min-height:116px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand img{width:250px;max-height:92px;object-fit:contain;object-position:left center}
+.brandline{font-size:12px;color:var(--muted);letter-spacing:.06em;font-weight:800;text-transform:uppercase;white-space:nowrap}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:800;color:#355066}
+.navlinks a:hover{color:var(--teal)}
+.actions{display:flex;align-items:center;gap:10px}
+.lang-btn{border:1px solid var(--line);background:#fff;color:var(--navy);padding:10px 13px;border-radius:999px;font-weight:900;cursor:pointer}
+.primary{border:0;background:var(--teal);color:white;padding:12px 17px;border-radius:999px;font-weight:900;cursor:pointer;box-shadow:0 8px 18px rgba(6,173,152,.20)}
+.primary:hover{transform:translateY(-1px);background:var(--teal2)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#092d4a 72%,#0b456f 100%);color:white;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:auto -100px -160px auto;width:430px;height:430px;border-radius:50%;border:1px solid rgba(255,255,255,.08)}
+.hero:after{content:"";position:absolute;left:-160px;top:-180px;width:430px;height:430px;border-radius:50%;border:1px solid rgba(6,173,152,.20)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(340px,.6fr);gap:58px;align-items:center;padding:74px 0 82px;position:relative;z-index:1}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:#9bdacf;margin-bottom:18px}
+.kicker:before{content:"";width:26px;height:2px;background:var(--teal)}
+.hero h1{font-size:clamp(48px,7vw,88px);line-height:.96;letter-spacing:-.055em;margin:0 0 24px;font-weight:950;max-width:740px}
+.hero h1 span{color:#5be0cb}
+.hero p{font-size:19px;max-width:760px;color:#dbe8ef;margin:0 0 30px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.hero .ghost{border:1px solid rgba(255,255,255,.24);padding:13px 18px;border-radius:999px;color:white;font-weight:800;background:rgba(255,255,255,.05)}
+.hero-stat{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.10);backdrop-filter:blur(10px);border-radius:22px;padding:36px 34px 34px;align-self:center;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0;min-height:430px;justify-content:center}
+.hero-stat .smallcap{font-size:15px;letter-spacing:.14em;color:#8db7cc;font-weight:900;text-transform:uppercase;text-align:center}
+.stat-main{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:24px}
+.hero-stat .main-value{font-size:132px;font-weight:950;line-height:.86;letter-spacing:-.05em;color:#fff}
+.hero-stat .main-label{font-size:34px;line-height:1.05;font-weight:800;color:#ecf4f8}
+.stat-divider{height:1px;background:rgba(255,255,255,.16);margin:30px 0 20px;width:100%}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%;text-align:center}
+.mini-stat{min-height:150px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:18px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.mini-stat b{font-size:84px;line-height:.9;display:flex;align-items:flex-end;justify-content:center;gap:2px;color:#fff;margin:0}
+.mini-stat .unit{font-size:.62em;line-height:1;position:relative;bottom:8px}
+.mini-stat .label{font-size:22px;line-height:1.2;color:#d6e3ec;display:block;margin-top:10px;font-weight:700}
+
+/* SECTIONS */
+section{padding:76px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:34px}
+.eyebrow{color:var(--teal);font-size:12px;font-weight:950;letter-spacing:.15em;text-transform:uppercase;margin-bottom:9px}
+h2{font-size:clamp(34px,5vw,55px);letter-spacing:-.04em;line-height:1.05;margin:0;color:var(--navy)}
+.lead{max-width:720px;color:var(--muted);font-size:17px;margin:12px 0 0}
+
+/* HOW */
+.how{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border:1px solid var(--line);background:#fff;border-radius:20px;padding:28px 24px;box-shadow:0 7px 18px rgba(7,55,93,.04);text-align:center;display:flex;flex-direction:column;align-items:center}
+.step .num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:white;font-weight:950;margin-bottom:16px}
+.step h3{margin:0 0 7px;color:var(--navy);font-size:18px}
+.step p{margin:0;color:var(--muted);font-size:14px}
+
+/* CARDS */
+.sessions-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{border:1px solid var(--line);border-radius:22px;background:white;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0;transition:.25s ease}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow2)}
+.card-media{height:190px;background:#e8f2f6;overflow:hidden;position:relative}
+.card-media img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.card-badge{position:absolute;left:14px;top:14px;background:rgba(7,55,93,.92);color:white;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900}
+.card-body{padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:20px;line-height:1.13;margin:0;color:var(--navy);letter-spacing:-.02em}
+.speaker{font-size:13px;font-weight:850;color:#334d60}
+.meta{display:grid;gap:6px;color:var(--muted);font-size:12px}
+.meta span{display:flex;align-items:center;gap:6px}
+.desc{color:#4f6475;font-size:13px;margin:0}
+.card-footer{padding:0 18px 18px}
+.register{width:100%;border:0;border-radius:13px;padding:11px 13px;background:var(--teal);color:white;font-weight:950;cursor:pointer;font-size:13px}
+.register:hover{background:var(--navy)}
+
+/* SUPPORT */
+.support-wrap{padding:0 0 74px}
+.support{background:linear-gradient(135deg,#eef8f8,#f6fbfd);border:1px solid #cfe2e5;border-radius:22px;padding:28px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.support h3{margin:0 0 4px;color:var(--navy);font-size:22px}
+.support p{margin:0;color:var(--muted)}
+.support a{display:inline-flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;border-radius:999px;padding:12px 17px;font-weight:900;white-space:nowrap}
+.support a:hover{background:var(--teal)}
+
+/* FOOTER */
+footer{background:#052844;color:#d4e1ea;padding:34px 0}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+footer b{color:#fff}
+footer small{color:#9fb4c3}
+
+/* ANIMATION */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}
+.reveal.show{opacity:1;transform:none}
+.zoom-reveal{opacity:0;transform:scale(.94) translateY(18px);transition:opacity .72s ease,transform .72s cubic-bezier(.2,.8,.2,1)}
+.zoom-reveal.show{opacity:1;transform:none}
+.step.reveal:nth-child(2){transition-delay:.09s}.step.reveal:nth-child(3){transition-delay:.18s}.step.reveal:nth-child(4){transition-delay:.27s}
+.card.zoom-reveal:nth-child(2){transition-delay:.06s}.card.zoom-reveal:nth-child(3){transition-delay:.12s}.card.zoom-reveal:nth-child(4){transition-delay:.18s}
+
+/* RTL */
+html[dir="rtl"] body{font-family:Tahoma,Arial,sans-serif}
+html[dir="rtl"] .brand img{object-position:right center}
+html[dir="rtl"] .kicker:before{order:2}
+html[dir="rtl"] .card-badge{left:auto;right:14px}
+
+@media(max-width:1050px){
+ .navlinks{display:none}.hero-grid{grid-template-columns:1fr;gap:34px}.hero-stat{max-width:520px;width:100%}.steps{grid-template-columns:repeat(2,1fr)}.sessions-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+ .container{width:min(100% - 24px,1180px)}.nav{min-height:92px}.brand img{width:190px;max-height:72px}.brandline{display:none}.hero-grid{padding:50px 0 58px}.hero h1{font-size:48px}.hero p{font-size:16px}.hero-stat{padding:24px;min-height:auto}.hero-stat .main-value{font-size:104px}.hero-stat .main-label{font-size:28px}.mini-stat{min-height:126px}.mini-stat b{font-size:62px}.mini-stat .label{font-size:18px}.steps,.sessions-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.support{align-items:flex-start;flex-direction:column}.support a{width:100%}.actions .primary{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal,.zoom-reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/logo.webp" alt="DAD Knowledge Bites logo">
+      <div class="brandline" data-en="DAD Academy · Learning & Development" data-ar="أكاديمية DAD · التعلم والتطوير">DAD Academy · Learning & Development</div>
+    </div>
+    <nav class="navlinks">
+      <a href="#about" data-en="About" data-ar="عن المبادرة">About</a>
+      <a href="#join" data-en="How to Join" data-ar="كيفية الانضمام">How to Join</a>
+      <a href="#sessions" data-en="Sessions" data-ar="الجلسات">Sessions</a>
+    </nav>
+    <div class="actions">
+      <button class="lang-btn" id="langToggle">العربية</button>
+      <a class="primary" href="#sessions" data-en="Explore Sessions" data-ar="استعرض الجلسات">Explore Sessions</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="about">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker" data-en="Knowledge shared by our people" data-ar="معرفة يشاركها زملاؤنا">Knowledge shared by our people</div>
+      <h1 data-en="Short sessions.<br><span>Real knowledge.</span>" data-ar="جلسات قصيرة.<br><span>معرفة حقيقية.</span>">Short sessions.<br><span>Real knowledge.</span></h1>
+      <p data-en="Two-hour interactive workshops led by colleagues who are experts in their fields and want to share what they know. Each Knowledge Bite gives you a real opportunity to meet the expert, explore a focused topic, ask your questions directly, and learn through discussion—within a practical format designed to fit the workday with minimal disruption." data-ar="ورش تفاعلية مدتها ساعتان، يقودها زملاء خبراء في مجالاتهم ويرغبون في مشاركة معرفتهم وخبراتهم مع الآخرين. تمنحك كل جلسة فرصة حقيقية للقاء الخبير، استكشاف موضوع محدد، طرح أسئلتك مباشرة، والتعلم من خلال النقاش—ضمن صيغة عملية تناسب يوم العمل وتقلل التأثير على مهامك.">Two-hour interactive workshops led by colleagues who are experts in their fields and want to share what they know. Each Knowledge Bite gives you a real opportunity to meet the expert, explore a focused topic, ask your questions directly, and learn through discussion—within a practical format designed to fit the workday with minimal disruption.</p>
+      <div class="hero-buttons">
+        <a class="primary" href="#sessions" data-en="Find your session" data-ar="اختر جلستك">Find your session</a>
+        <a class="ghost" href="#join" data-en="How it works" data-ar="كيف تعمل المبادرة">How it works</a>
+      </div>
+    </div>
+    <div class="hero-stat">
+      <div class="smallcap" data-en="YOUR KNOWLEDGE BITES LINE-UP" data-ar="برنامج جلسات المعرفة">YOUR KNOWLEDGE BITES LINE-UP</div>
+      <div class="stat-main">
+        <div class="main-value"><span class="count-number" data-count="9">0</span></div>
+        <div class="main-label" data-en="sessions" data-ar="جلسات">sessions</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-row">
+        <div class="mini-stat">
+          <b><span class="count-number" data-count="2">0</span><span class="unit">H</span></b>
+          <span class="label" data-en="each session" data-ar="مدة كل جلسة">each session</span>
+        </div>
+        <div class="mini-stat">
+          <b><span class="count-number" data-count="25">0</span></b>
+          <span class="label" data-en="seats / session" data-ar="مقعداً / جلسة">seats / session</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="join">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-en="HOW TO JOIN" data-ar="كيفية الانضمام">HOW TO JOIN</div>
+        <h2 data-en="Simple. Focused. Practical." data-ar="بسيطة. مركزة. عملية.">Simple. Focused. Practical.</h2>
+        <p class="lead" data-en="Choose the topic that interests you, reserve your seat, and come ready to learn directly from the expert, ask questions, and take part in the discussion." data-ar="اختر الموضوع الذي يهمك، احجز مقعدك، وتعال مستعداً للتعلم مباشرة من الخبير، طرح أسئلتك، والمشاركة في النقاش.">Choose the topic that interests you, reserve your seat, and come ready to learn directly from the expert, ask questions, and take part in the discussion.</p>
+      </div>
+    </div>
+    <div class="steps">
+      <article class="step reveal"><div class="num">1</div><h3 data-en="Explore" data-ar="استكشف">Explore</h3><p data-en="Browse the available topics and choose what is most relevant to you." data-ar="استعرض المواضيع المتاحة واختر الأكثر ارتباطاً باهتماماتك.">Browse the available topics and choose what is most relevant to you.</p></article>
+      <article class="step reveal"><div class="num">2</div><h3 data-en="Register" data-ar="سجّل">Register</h3><p data-en="Click Register and complete the short Microsoft Form for your selected session." data-ar="اضغط على التسجيل وأكمل نموذج Microsoft القصير للجلسة التي اخترتها.">Click Register and complete the short Microsoft Form for your selected session.</p></article>
+      <article class="step reveal"><div class="num">3</div><h3 data-en="Confirm" data-ar="أكد">Confirm</h3><p data-en="Your registration is subject to seat availability. Each session is limited to 25 seats." data-ar="يعتمد التسجيل على توفر المقاعد، حيث تقتصر كل جلسة على 25 مقعداً.">Your registration is subject to seat availability. Each session is limited to 25 seats.</p></article>
+      <article class="step reveal"><div class="num">4</div><h3 data-en="Join & Ask" data-ar="احضر واسأل">Join & Ask</h3><p data-en="Meet the expert, engage in the discussion, and ask the questions that matter to you." data-ar="التقِ بالخبير، شارك في النقاش، واطرح الأسئلة التي تهمك.">Meet the expert, engage in the discussion, and ask the questions that matter to you.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="sessions">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-en="2026 LINE-UP" data-ar="برنامج 2026">2026 LINE-UP</div>
+        <h2 data-en="Choose your Knowledge Bite" data-ar="اختر جرعتك المعرفية">Choose your Knowledge Bite</h2>
+        <p class="lead" data-en="Focused, practical sessions led by DAD colleagues who bring real experience from their areas of expertise." data-ar="جلسات مركزة وعملية يقدمها زملاء من DAD لديهم خبرة حقيقية في مجالات تخصصهم.">Focused, practical sessions led by DAD colleagues who bring real experience from their areas of expertise.</p>
+      </div>
+    </div>
+    <div class="sessions-grid" id="sessionsGrid"></div>
+  </div>
+</section>
+
+<div class="support-wrap">
+  <div class="container">
+    <div class="support reveal">
+      <div>
+        <h3 data-en="Need support or clarification?" data-ar="تحتاج إلى دعم أو توضيح؟">Need support or clarification?</h3>
+        <p data-en="Contact DAD Academy and we will be happy to help." data-ar="تواصل مع أكاديمية DAD وسنسعد بمساعدتك.">Contact DAD Academy and we will be happy to help.</p>
+      </div>
+      <a href="mailto:dad.academy@dadgroup.com">dad.academy@dadgroup.com</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div><b>DAD Knowledge Bites</b><br><small data-en="Short sessions. Real knowledge. Shared by our people." data-ar="جلسات قصيرة. معرفة حقيقية. يشاركها زملاؤنا.">Short sessions. Real knowledge. Shared by our people.</small></div>
+    <small data-en="DAD Academy · Learning & Development" data-ar="أكاديمية DAD · التعلم والتطوير">DAD Academy · Learning & Development</small>
+  </div>
+</footer>
+
+<script>
+const FORM_URLS = [
+  "https://forms.cloud.microsoft/r/TqGjbCuc3W",
+  "https://forms.cloud.microsoft/r/dMwfc3AMGS",
+  "https://forms.cloud.microsoft/r/absKBTN48j",
+  "https://forms.cloud.microsoft/r/BSQrDDc53B",
+  "https://forms.cloud.microsoft/r/ng5TN6diws",
+  "https://forms.cloud.microsoft/r/gegtU7edfF",
+  "https://forms.cloud.microsoft/r/yCHcZZDf4t",
+  "https://forms.cloud.microsoft/r/Ts1SB5XqmU",
+  "https://forms.cloud.microsoft/r/vAbZGbkeBa"
+];
+const sessions = [
+ {title:"Better Habits, Better Workdays", speaker:"Dr. Omar Abu Omar", image:"assets/speaker-1.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Build practical habits that support stronger performance and more effective workdays."},
+ {title:"Communication That Works", speaker:"DAD Expert", image:"assets/speaker-2.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Explore practical communication techniques you can use immediately at work."},
+ {title:"Working Smarter with Data", speaker:"DAD Expert", image:"assets/speaker-3.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Turn everyday data into clearer insights and better workplace decisions."},
+ {title:"Presentation with Impact", speaker:"DAD Expert", image:"assets/speaker-4.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Make your ideas clearer, more persuasive, and easier for others to remember."},
+ {title:"Practical Problem Solving", speaker:"DAD Expert", image:"assets/speaker-5.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Use simple structured thinking to understand problems and move toward solutions."},
+ {title:"Influence Through Conversation", speaker:"DAD Expert", image:"assets/speaker-6.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Learn how better conversations can help you build alignment and influence outcomes."},
+ {title:"Making Better Decisions", speaker:"DAD Expert", image:"assets/speaker-7.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Strengthen how you evaluate options, challenge assumptions, and make decisions."},
+ {title:"Personal Productivity", speaker:"DAD Expert", image:"assets/speaker-8.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Discover practical ways to organize your priorities and protect your focus."},
+ {title:"Learning from Experience", speaker:"DAD Expert", image:"assets/speaker-9.webp", date:"2026", time:"2 hours", location:"DAD", desc:"Turn everyday experiences into useful lessons you can apply and share."}
+];
+
+let currentLang="en";
+const grid=document.getElementById("sessionsGrid");
+function renderSessions(){
+ grid.innerHTML=sessions.map((s,i)=>`<article class="card zoom-reveal">
+   <div class="card-media"><img src="${s.image}" alt="${s.speaker}"><span class="card-badge">${currentLang==='en'?'Knowledge Bite':'جرعة معرفية'}</span></div>
+   <div class="card-body"><h3>${s.title}</h3><div class="speaker">${s.speaker}</div><div class="meta"><span>📅 ${s.date}</span><span>⏱ ${s.time}</span><span>📍 ${s.location}</span></div><p class="desc">${s.desc}</p></div>
+   <div class="card-footer"><button class="register" onclick="openRegistration(${i})">${currentLang==='en'?'Register':'سجّل الآن'}</button></div>
+ </article>`).join('');
+ observeReveals();
+}
+let registrationWindow=null;
+function openRegistration(i){
+ const url=FORM_URLS[i];
+ if(registrationWindow && !registrationWindow.closed){
+   registrationWindow.location.href=url;
+   registrationWindow.focus();
+   return;
+ }
+ const width=Math.min(920,screen.availWidth-60), height=Math.min(820,screen.availHeight-80);
+ const left=Math.max(0,(screen.availWidth-width)/2), top=Math.max(0,(screen.availHeight-height)/2);
+ registrationWindow=window.open(url,"DADKnowledgeBitesRegistration",`popup=yes,width=${Math.round(width)},height=${Math.round(height)},left=${Math.round(left)},top=${Math.round(top)},resizable=yes,scrollbars=yes`);
+ if(!registrationWindow){ window.location.href=url; }
+}
+function setLang(lang){
+ currentLang=lang;
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+ document.querySelectorAll('[data-en][data-ar]').forEach(el=>{el.innerHTML=el.dataset[lang]});
+ document.getElementById('langToggle').textContent=lang==='en'?'العربية':'English';
+ renderSessions();
+}
+document.getElementById('langToggle').addEventListener('click',()=>setLang(currentLang==='en'?'ar':'en'));
+
+let observer;
+function observeReveals(){
+ if(!observer){observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.13,rootMargin:'0px 0px -30px'})}
+ document.querySelectorAll('.reveal:not(.show),.zoom-reveal:not(.show)').forEach(el=>observer.observe(el));
+}
+function animateCounters(){
+ const duration=1500;
+ const counters=[...document.querySelectorAll('.count-number[data-count]')];
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){counters.forEach(c=>c.textContent=c.dataset.count);return}
+ const start=performance.now();
+ function tick(now){const p=Math.min(1,(now-start)/duration), eased=1-Math.pow(1-p,3);counters.forEach(c=>c.textContent=Math.round(Number(c.dataset.count)*eased));if(p<1)requestAnimationFrame(tick)}
+ requestAnimationFrame(tick);
+}
+renderSessions();observeReveals();animateCounters();
+</script>
+</body>
+</html>
